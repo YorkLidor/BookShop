@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Book Shop</title>
+</head>
+
+<body onload="onInit()">
+
+    
+
+    
+
+    <h1 data-trans="title">My Book Shop</h1>
+    
+    <div class="test">
+        <button class="btn-top add-book" onclick="onAddBook()" data-trans="add-book">Add Book</button>
+        <button class="btn-top serch-book" onclick="onSerchByName()" data-trans="serch-book">Serch Book By Name</button>
+        <button class="btn-top" onclick="onDisplayChange()">♒</button>
+        <select class="btn-top select-lang" onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+        </select>
+    </div>
+
+    <div class="modal">
+        <h3></h3>
+        <h4 data-trans="modal-price"></h4>
+        <span class="price-span">$</span>
+        <h5 data-trans="modal-summary">Book Summary</h5>
+        <button onclick="onRateChange(1)" class="btn rate-btn">+</button>
+        <span class="rate">2</span>
+        <button onclick="onRateChange(-1)" class="btn rate-btn">-</button>
+        <p></p>
+        <button onclick="onCloseModal()" data-trans="modal-close">Close</button>
+    </div>
+
+    <!-- Table Container -->
+    <div class="table-container">
+        <section class="books-container"> 
+            
+        </section>
+    </div>
+
+
+    <!-- Cards Container -->
+    <div class="cards-container hidden" >
+        <section class="cards-container-section" > 
+            <!-- <div class="card">
+                <img src="/images/bibi.jpg" alt="John" style="width:70%">
+                <h2>Name</h2>
+                <h3>ID</h3>
+                <h3>Price</h3>
+                <h3>Rate</h3>            
+                <p><button class="card">Read</button></p>
+                <p><button class="card">Update</button></p>
+                <p><button class="card">Delete</button></p>
+            </div> -->
+        </section>
+    </div>
+       
+    <!-- Pageing Buttons -->
+    <div class="btn pageing">
+        <button class="btn disable-l paging" onclick="onPaging('left')" data-trans="prev">Prev</button>
+        <button class="btn disable-r paging" onclick="onPaging('right')" data-trans="next">Next</button>
+    </div>
+
+    
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/i18.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+
+</html>
