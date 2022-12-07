@@ -12,14 +12,11 @@
 </head>
 
 <body onload="onInit()">
-
-    
-
-    
-
     <h1 data-trans="title">My Book Shop</h1>
     
     <div class="test">
+        <!-- Pageing Buttons -->
+        <button class="btn btn-top disable-l paging" onclick="onPaging('left')" data-trans="prev">Prev</button>
         <button class="btn-top add-book" onclick="onAddBook()" data-trans="add-book">Add Book</button>
         <button class="btn-top serch-book" onclick="onSerchByName()" data-trans="serch-book">Serch Book By Name</button>
         <button class="btn-top" onclick="onDisplayChange()">♒</button>
@@ -27,6 +24,7 @@
             <option value="en">English</option>
             <option value="he">עברית</option>
         </select>
+        <button class="btn btn-top disable-r paging" onclick="onPaging('right')" data-trans="next">Next</button>
     </div>
 
     <div class="modal">
@@ -65,13 +63,6 @@
         </section>
     </div>
        
-    <!-- Pageing Buttons -->
-    <div class="btn pageing">
-        <button class="btn disable-l paging" onclick="onPaging('left')" data-trans="prev">Prev</button>
-        <button class="btn disable-r paging" onclick="onPaging('right')" data-trans="next">Next</button>
-    </div>
-
-    
 
     <script src="js/services/util.service.js"></script>
     <script src="js/services/storage.service.js"></script>

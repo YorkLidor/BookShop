@@ -82,13 +82,11 @@ function getTrans(transKey) {
     //if key is unknown return 'UNKNOWN'
     const key = gTrans[transKey]
     if (!key) return 'UNKNOWN'
-
     //get from gTrans
     var translation = key[gCurrLang]
+    //If translation not found - use english by defult
 
-    //If translation not found - use english
     if (!translation) translation = key.en
-
     return translation
 }
 
@@ -97,9 +95,7 @@ function doTrans() {
     els.forEach(el => {
         const transKey = el.dataset.trans
         const translation = getTrans(transKey)
-
         el.innerText = translation
-
         // supports placeholders    
         if (el.placeholder) el.placeholder = translation
     }) 

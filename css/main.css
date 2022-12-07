@@ -10,6 +10,10 @@ body {
   background-size: cover;
 }
 
+body .rtl{
+	direction: rtl;
+}
+
 .hidden{
 	display: none;
 }
@@ -17,6 +21,7 @@ body {
 .pageing{
 	display: flex;
 	justify-content: space-evenly;
+	background-color: #16171d;
 }
 
 .paging{
@@ -285,6 +290,7 @@ tbody td:hover:before {
 	height: 600px;
 	justify-content: space-around;
 	margin: auto;
+	padding: 70px;
 }
 
 .title {
